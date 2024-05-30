@@ -5,7 +5,7 @@ import logging #to log information during runtime
 #initially create logging stream
 logging.basicConfig(level= logging.INFO, format = '[%(asctime)s]: %(message)s:')
 
-project_name = "text-summarizer"
+project_name = "textSummarizer"
 
 list_of_files = [
     ".github.com/workflows/.gitkeep",
