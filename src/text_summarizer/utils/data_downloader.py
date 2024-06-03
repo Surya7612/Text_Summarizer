@@ -5,7 +5,7 @@ def download_datasets():
         {"name": "xsum", "config": None, "trust_remote_code": True},
         {"name": "multi_news", "config": None, "trust_remote_code": True},
         {"name": "gigaword", "config": None, "trust_remote_code": True},
-        {"name": "big_patent", "config": None, "trust_remote_code": True},
+        {"name": "big_patent", "config": "a", "trust_remote_code": True},
         {"name": "samsum", "config": None, "trust_remote_code": True},
     ]
 

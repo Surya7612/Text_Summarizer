@@ -1,15 +1,52 @@
-artifacts_root: artifacts
+artifacts_root: ./artifacts
 
-artifacts:
-  data:
-    raw_data_path: '/Users/surya/iCloud Drive/Documents/text_summarizer/data/raw'
-    processed_data_path: '/Users/surya/iCloud Drive/Documents/text_summarizer/data/processed'
-    train_data: '/Users/surya/iCloud Drive/Documents/text_summarizer/data/processed/train_data.csv'
-    val_data: '/Users/surya/iCloud Drive/Documents/text_summarizer/data/processed/val_data.csv'
-    test_data: '/Users/surya/iCloud Drive/Documents/text_summarizer/data/processed/test_data.csv'
-  models:
-    pegasus_model_dir: '/Users/surya/iCloud Drive/Documents/text_summarizer/models/pegasus'
-    bart_model_dir: '/Users/surya/iCloud Drive/Documents/text_summarizer/models/bart'
-  logs:
-    log_dir: '/Users/surya/iCloud Drive/Documents/text_summarizer/logs'
+data_ingestion:
+    root_dir: ./artifacts/data_ingestion
+    dataset_names:
+      - "cnn_dailymail"
+      - "xsum"
+      - "multi_news"
+      - "gigaword"
+      - "big_patent"
+      - "samsum"
+    configs:
+      - "3.0.0"
+      - null
+      - null
+      - null
+      - "a"
+      - null
+    trust_remote_code:
+      - false
+      - true
+      - true 
+      - true 
+      - true 
+      - true 
+    concatenated_data_dir: ./artifacts/data_ingestion/concatenated
+
+data_validation:
+    root_dir: ./artifacts/data_validation
+    STATUS_FILE: ./artifacts/data_validation/status.txt
+    ALL_REQUIRED_FILES: ["train.csv", "validation.csv", "test.csv"]
+
+data_transformation:
+    root_dir: ./artifacts/data_transformation
+    data_path: ./artifacts/data_ingestioon/concatenated
+    tokenizer_names:
+      - google/pegasus-cnn_dailymail
+      -facebook/bart-large-cnn
+
+model_trainer:
+    root_dir: ./artifacts/model_trainer
+    data_path: ./artifacts/data_transforamtion
+    model_paths:
+      - ./artifacts/model_trainer/pegasus-summarizer-model
+      - .artifacts/model_trainer/bart-sumamrizer-model
+    tokenizer_paths:
+      - ./artifacts/model_trainer/pegasus-tokenizer
+      - ./artifacts/model_trainer/bart-tokenizer
+    metric_file_name: ./artifacts/model_evaluation/metrics.csv
+
+    
 
