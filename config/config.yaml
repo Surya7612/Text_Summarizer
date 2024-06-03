@@ -1,0 +1,15 @@
+artifacts_root: artifacts
+
+artifacts:
+  data:
+    raw_data_path: '/Users/surya/iCloud Drive/Documents/text_summarizer/data/raw'
+    processed_data_path: '/Users/surya/iCloud Drive/Documents/text_summarizer/data/processed'
+    train_data: '/Users/surya/iCloud Drive/Documents/text_summarizer/data/processed/train_data.csv'
+    val_data: '/Users/surya/iCloud Drive/Documents/text_summarizer/data/processed/val_data.csv'
+    test_data: '/Users/surya/iCloud Drive/Documents/text_summarizer/data/processed/test_data.csv'
+  models:
+    pegasus_model_dir: '/Users/surya/iCloud Drive/Documents/text_summarizer/models/pegasus'
+    bart_model_dir: '/Users/surya/iCloud Drive/Documents/text_summarizer/models/bart'
+  logs:
+    log_dir: '/Users/surya/iCloud Drive/Documents/text_summarizer/logs'
+
