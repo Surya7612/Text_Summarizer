@@ -55,8 +55,8 @@ curl -X POST "http://localhost:8080/predict" -H "Content-Type: application/json"
 ## Version 0.1
 This is version 0.1 of SummarizeMaster. In this version, we have:
 
-** Used only 1 epoch for training and validation.
-** Utilized a subset of the data due to computational restrictions.
+- Used only 1 epoch for training and validation.
+- Utilized a subset of the data due to computational restrictions.
 Future versions will involve stronger models, more extensive data utilization, and improved training configurations.
 
 ## Project Structure
