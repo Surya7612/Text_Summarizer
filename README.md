@@ -107,4 +107,3 @@ This project is licensed under the MIT License. See the LICENSE file for details
 This README provides a comprehensive overview of the "SummarizeMaster" project, guiding users through installation, usage, and understanding the project structure.
 ```
 
-## work still in progress ...
