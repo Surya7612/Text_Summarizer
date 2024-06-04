@@ -13,7 +13,7 @@ torch
 notebook
 boto3
 mypy-boto3-s3
-python-box
+python-box[all]~=7.0
 ensure
 fastapi
 uvicorn
