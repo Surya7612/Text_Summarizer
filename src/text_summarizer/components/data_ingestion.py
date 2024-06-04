@@ -16,21 +16,20 @@ class DataIngestion:
                 "trust_remote_code": trust_code
             })
         
-        datasets = load_datasets(datasets_info)
+        datasets = load_datasets(datasets_info, self.config.concatenated_data_dir)
         column_mappings = [
             {'article': 'text', 'highlights': 'summary'},
             {'document': 'text', 'summary': 'summary'},
             {'document': 'text', 'summary': 'summary'},
             {'document': 'text', 'summary': 'summary'},
             {'description': 'text', 'abstract': 'summary'},
-            {'dialogue': 'text', 'summary': 'summary'},
+            {'dialogue': 'text', 'summary': 'summary'}
         ]
         self.datasets = standardize_column_names(datasets, column_mappings)
-
-    def concatenate_splits(self):
+        
+    def concatenate_datasets(self):
         train_dataset, val_dataset, test_dataset = concatenate_splits(self.datasets)
         os.makedirs(self.config.concatenated_data_dir, exist_ok=True)
         train_dataset.save_to_disk(os.path.join(self.config.concatenated_data_dir, "train"))
         val_dataset.save_to_disk(os.path.join(self.config.concatenated_data_dir, "validation"))
         test_dataset.save_to_disk(os.path.join(self.config.concatenated_data_dir, "test"))
-

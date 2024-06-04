@@ -23,5 +23,27 @@ setuptools.setup(
         "Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",
     },
     package_dir={"": "src"},
-    packages=setuptools.find_packages(where="src")
+    packages=setuptools.find_packages(where="src"),
+    install_requires=[
+        "fastapi",
+        "uvicorn",
+        "transformers[sentencepiece]",
+        "datasets",
+        "tqdm",
+        "pandas",
+        "nltk",
+        "pydantic",
+        "pyyaml",
+        "ensure",
+        "box"
+    ],
+    entry_points={
+        "console_scripts": [
+            "text_summarizer_train=text_summarizer.pipeline.stage_01_data_ingestion:main",
+            "text_summarizer_validate=text_summarizer.pipeline.stage_02_data_validation:main",
+            "text_summarizer_transform=text_summarizer.pipeline.stage_03_data_transformation:main",
+            "text_summarizer_train_model=text_summarizer.pipeline.stage_04_model_trainer:main",
+            "text_summarizer_evaluate_model=text_summarizer.pipeline.stage_05_model_evaluation:main"
+        ]
+    }
 )
