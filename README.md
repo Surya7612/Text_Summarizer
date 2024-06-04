@@ -54,7 +54,7 @@ curl -X POST "http://localhost:8080/predict" -H "Content-Type: application/json"
 ```
 
 ## Project Structure
-
+```bash
 summarize-master/
 ├── .github/
 │   └── workflows/
@@ -93,6 +93,7 @@ summarize-master/
 ├── README.md
 ├── requirements.txt
 └── setup.py
+```
 
 ## Configuration
 The configuration file config/config.yaml contains all the necessary configurations for data ingestion, validation, transformation, model training, and evaluation.
