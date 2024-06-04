@@ -35,7 +35,7 @@ setuptools.setup(
         "pydantic",
         "pyyaml",
         "ensure",
-        "box"
+        "python-box"
     ],
     entry_points={
         "console_scripts": [
