@@ -14,7 +14,7 @@ SummarizeMaster is a Python package for text summarization using state-of-the-ar
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/summarize-master.git
+    https://github.com/Surya7612/Text_Summarizer.git
     cd summarize-master
     ```
 
