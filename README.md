@@ -1,3 +1,12 @@
+
+## Project Status
+
+**Work Halted Due to Deployment Issues**
+
+Currently, the development of this project is on hold due to some deployment issues I am facing. I am actively working on resolving these issues and will resume the project as soon as possible.
+
+Thank you for your understanding and patience.
+
 # SummarizeMaster
 
 SummarizeMaster is a Python package for text summarization using state-of-the-art models like PEGASUS and BART. The package integrates multiple datasets from Hugging Face and provides functionalities for training, evaluation, and prediction.
@@ -112,5 +121,3 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ```bash
 This README provides a comprehensive overview of the "SummarizeMaster" project, guiding users through installation, usage, and understanding the project structure.
 ```
-
-# Work still in progress...
