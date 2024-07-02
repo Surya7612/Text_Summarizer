@@ -3,7 +3,7 @@
 
 **Work Halted Due to Deployment Issues**
 
-Currently, the development of this project is on hold due to some deployment issues I am facing. I am actively working on resolving these issues and will resume the project as soon as possible.
+Currently, the development of this project is on hold due to some deployment issues(pricing issues) I am facing. I am actively working on resolving these issues and will deploy the project as soon as possible. The code works locally, feel free to use it locally till then.
 
 Thank you for your understanding and patience.
 
